@@ -31,12 +31,13 @@ function App() {
           <Route path="/login" element={!user ? <Login /> : <Navigate to='/employeedetails' />} />
           <Route path="/employeedetails" element={user ? <Employeedetails /> : <Navigate to='/login' />} />
           <Route path="/employeejobapply" element={user ? <Employeejobapply/> : <Navigate to='/employeedetails' />} />
-
+         
+          <Route path="/employerdetails"/>
 
 
           <Route path="/adminsignup" element={!user ? <Adminsignup /> : <Navigate to='/adminlogin' />} />
           <Route path="/adminlogin" element={!user ? <Adminlogin /> : <Navigate to='/employerdetails' />} />
-          <Route path="/employerdetails" element={user ? <Employerprofile /> : <Navigate to='/adminlogin' />} />
+          {/* <Route path="/employerdetails" element={user ? <Employerprofile /> : <Navigate to='/adminlogin' />} /> */}
           <Route path="/jobpost" element={user ? <JobPost/> : <Navigate to='/employerdetails' />} />
           <Route path="/application" element={user ? <Application/> : <Navigate to='/employerdetails' />} />
 
